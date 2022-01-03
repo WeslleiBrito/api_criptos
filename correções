@@ -1,0 +1,12 @@
+Objetivo: Corrigir do bug do horário no windows
+Modo de ação: colar o script a baixo no prompt de comando em dodo administrador
+
+Script:
+net stop w32time
+w32tm /unregister
+
+w32tm /register
+
+net start w32time
+
+w32tm /resync
